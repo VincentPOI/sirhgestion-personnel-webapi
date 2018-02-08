@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+	<import resource="classpath:comptes.xml" />
+	<import resource="departements.xml" />
+
+	<bean id="co1" class="dev.api.entite.Collaborateur">
+		<property name="matricule" value="C01"></property>
+		<property name="nom" value="dupond"></property>
+		<property name="prenom" value="jean"></property>
+		<property name="departement">
+			<ref bean="d1" />
+		</property>
+		<property name="compte">
+			<ref bean="c1" />
+		</property>
+	</bean>
+
+	<bean id="co2" class="dev.api.entite.Collaborateur">
+		<property name="matricule" value="C02"></property>
+		<property name="nom" value="dupont"></property>
+		<property name="prenom" value="michel"></property>
+		<property name="departement">
+			<ref bean="d2" />
+		</property>
+		<property name="compte">
+			<ref bean="c2" />
+		</property>
+	</bean>
+
+
+</beans>

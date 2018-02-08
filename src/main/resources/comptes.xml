@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+	<bean id="c1" class="dev.api.entite.Compte">
+		<property name="banque" value="CMB"></property>
+		<property name="bic" value="213213564456541"></property>
+		<property name="iban" value="FR76 1234 12334"></property>
+	</bean>
+	
+	<bean id="c2" class="dev.api.entite.Compte">
+		<property name="banque" value="CIC"></property>
+		<property name="bic" value="6545461465897"></property>
+		<property name="iban" value="FR76 5454 54564"></property>
+	</bean>
+	
+	<bean id="c3" class="dev.api.entite.Compte">
+		<property name="banque" value="BNP"></property>
+		<property name="bic" value="45654587132213"></property>
+		<property name="iban" value="FR76 1324 4567"></property>
+	</bean>
+
+</beans>
